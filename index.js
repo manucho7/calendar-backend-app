@@ -1,4 +1,3 @@
-const { response } = require('express');
 const express = require('express');
 require('dotenv').config();
 
@@ -15,6 +14,9 @@ app.listen( process.env.PORT, () => {
 //Directorio Publico middleware para configurar acceso a carpeta publica
 app.use( express.static('public') );
 
+
+// Lectura y parseo del body
+app.use( express.json() );
 
 //rutas
 
